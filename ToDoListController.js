@@ -21,6 +21,6 @@ module.exports.deleteList = async(req, res) => {
 
 module.exports.editList = async(req, res) => {
     const {_id, name} = req.body
-    ToDoListModel.findByIdAndDelete(_id, { name })
+    ToDoListModel.findByIdAndUpdate(_id, { name })
     .then(() => res.send('Edited'))
 }
